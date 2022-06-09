@@ -1,0 +1,8 @@
+path: /content/Yolov5/Road_Sign_Dataset  # dataset root dir
+train: /content/Yolov5/Road_Sign_Dataset/images/train  # train images (relative to 'path') 128 images
+val: /content/Yolov5/Road_Sign_Dataset/images/val  # val images (relative to 'path') 128 images
+test: /content/Yolov5/Road_Sign_Dataset/images/test # test images (optional)
+
+# Classes
+nc: 4  # number of classes
+names: ['trafficlight', 'stop', 'speedlimit', 'crosswalk']  # class names
