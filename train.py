@@ -287,7 +287,7 @@ def train(hyp, opt, device, callbacks):  # hyp is path/to/hyp.yaml or hyp dictio
     
     from thop import profile
 
-    input1 = torch.randn(1, 3, imgsz, imgsz).to(device)
+    input1 = torch.randn(len(dataset)//128, 3, imgsz, imgsz).to(device)
     print("------------------")
     macs, params = profile(model, inputs=(input1, ))
     print("%.2f | %.2f" % (params / (1000 ** 2), macs / (1000 ** 3)))
